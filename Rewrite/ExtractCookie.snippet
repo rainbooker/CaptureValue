@@ -1,6 +1,15 @@
 #获取Cookie成功后，取消本条重写的勾选（把✅变为☑️），从而避免产生不必要的mitm消耗手机性能。
 
-hostname = mxsa.mxbc.net, webapi2.qmai.cn, mcs-mimp-web.sf-express.com, api.m.jd.com, res.woread.com.cn, cps.hisense.com, sweixin.hisense.com
+hostname = group.yun.139.com, aas.caiyun.feixin.10086.cn, mxsa.mxbc.net, webapi2.qmai.cn, mcs-mimp-web.sf-express.com, api.m.jd.com, res.woread.com.cn, cps.hisense.com, sweixin.hisense.com
+
+
+#移动云盘App
+#获取Authorization
+//hostname = group.yun.139.com
+^https:\/\/group\.yun\.139\.com\/hcy\/family\/adapter\/andAlbum\/openApi\/getUserInfo$ url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/ChinaMobileExtractAuthorization.js
+#获取Token
+//hostname = aas.caiyun.feixin.10086.cn
+^https:\/\/aas\.caiyun\.feixin\.10086\.cn:443\/tellin\/querySpecToken\.do$ url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/ChinaMobileExtractToken.js
 
 
 #蜜雪冰城小程序 点击 我的
