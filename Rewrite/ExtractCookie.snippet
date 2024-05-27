@@ -5,32 +5,32 @@ hostname = webapi2.qmai.cn, mcs-mimp-web.sf-express.com, api.m.jd.com, res.worea
 
 #霸王茶姬Applet
 //hostname = webapi2.qmai.cn
-^https:\/\/webapi2\.qmai\.cn\/web\/cmk\-center\/marketing url script-response-body ChageeExtractToken.js
+^https:\/\/webapi2\.qmai\.cn\/web\/cmk\-center\/marketing url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/ChageeExtractToken.js
 
 
 #顺丰速运 打开小程序或APP-我的-积分
 //hostname = mcs-mimp-web.sf-express.com
 #顺丰速运Applet
-^https:\/\/mcs\-mimp\-web\.sf\-express\.com\/mcs\-mimp\/share\/weChat\/shareGiftReceiveRedirect url script-response-body SF-ExpressExtractURL.js
+^https:\/\/mcs\-mimp\-web\.sf\-express\.com\/mcs\-mimp\/share\/weChat\/shareGiftReceiveRedirect url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/SF-ExpressExtractURL.js
 #顺丰速运App
-^https:\/\/mcs\-mimp\-web\.sf\-express\.com\/mcs\-mimp\/share\/app\/shareRedirect url script-response-body SF-ExpressExtractURL.js
+^https:\/\/mcs\-mimp\-web\.sf\-express\.com\/mcs\-mimp\/share\/app\/shareRedirect url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/SF-ExpressExtractURL.js
 
 
 #京东网页版 登录后点击 我的
 //hostname = api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/api\?functionId=GetJDUserInfoUnionForJD url script-response-body JingDongExtractCookie.js
+^https:\/\/api\.m\.jd\.com\/api\?functionId=GetJDUserInfoUnionForJD url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/JingDongExtractCookie.js
 
 
-#联通App 月光宝盒阅读页面
+#联通App 阅光宝盒阅读页面
 //hostname = res.woread.com.cn
-^http:\/\/res\.woread\.com\.cn\/active\/readGiftBoxActive url script-response-body ExtractCookie.js
+^http:\/\/res\.woread\.com\.cn\/active\/readGiftBoxActive url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/ChinaUnicomWoReadExtractCookie.js
 
 
 #海信爱家 依次点击 海信爱家（微信公众号） -> （右下角 位置）个人中心 -> （第一个 位置）会员中心 -> （中间偏左下 位置）玩转积分 Quantumult X会通知获取Cookie成功 点开通知 复制Cookie
 #账户积分Cookie
 //hostname = sweixin.hisense.com
-^https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember url script-request-header https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/ExtractCookie.js
+^https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember url script-request-header https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/HisenseExtractUserInfoCookie.js
 #做任务Cookie
 //hostname = cps.hisense.com
-^https:\/\/cps\.hisense\.com\/customerAth\/activity\-manage\/activityUser\/noLoginCheck$ url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/ExtractCookie.js
+^https:\/\/cps\.hisense\.com\/customerAth\/activity\-manage\/activityUser\/noLoginCheck$ url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/HisenseExtractActivityCookie.js
 
