@@ -6,7 +6,7 @@ hostname = res.woread.com.cn, 10010.woread.com.cn, next.gacmotor.com, group.yun.
 
 #联通App 阅光宝盒阅读页面 获取Cookie
 //hostname = res.woread.com.cn
-^http:\/\/res\.woread\.com\.cn\/active\/readGiftBoxActive url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/ExtractCookie.js
+^http:\/\/res\.woread\.com\.cn\/active\/readGiftBoxActive url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/ChinaUnicomWoReadExtractCookie.js
 #联通App 阅光宝盒 改库存
 //hostname = 10010.woread.com.cn
 ^https:\/\/10010\.woread\.com\.cn\/ng_woread_service\/rest\/activity423\/queryActiveTaskList$ url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/MoonBox.js
