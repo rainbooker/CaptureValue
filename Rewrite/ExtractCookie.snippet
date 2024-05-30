@@ -1,11 +1,18 @@
 #获取Cookie成功后，取消本条重写的勾选（把✅变为☑️），从而避免产生不必要的mitm消耗手机性能。
 
-hostname = 10010.woread.com.cn, next.gacmotor.com, group.yun.139.com, aas.caiyun.feixin.10086.cn, mxsa.mxbc.net, webapi2.qmai.cn, mcs-mimp-web.sf-express.com, api.m.jd.com, res.woread.com.cn, cps.hisense.com, sweixin.hisense.com
+hostname = res.woread.com.cn, 10010.woread.com.cn, next.gacmotor.com, group.yun.139.com, aas.caiyun.feixin.10086.cn, mxsa.mxbc.net, webapi2.qmai.cn, mcs-mimp-web.sf-express.com, api.m.jd.com, sweixin.hisense.com, cps.hisense.com
 
 
 
+#联通App 阅光宝盒阅读页面 获取Cookie
+//hostname = res.woread.com.cn
+^http:\/\/res\.woread\.com\.cn\/active\/readGiftBoxActive url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/ExtractCookie.js
+#联通App 阅光宝盒 改库存
 //hostname = 10010.woread.com.cn
 ^https:\/\/10010\.woread\.com\.cn\/ng_woread_service\/rest\/activity423\/queryActiveTaskList$ url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/MoonBox.js
+#联通App 阅光宝盒 改库存后获取请求体
+^https:\/\/10010\.woread\.com\.cn\/ng_woread_service\/rest\/activity423\/receiveActiveTask$ url script-request-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/MoonBoxExtractRequestBody.js
+
 
 #广汽传祺App 验证码登录过程中获取 Token
 //hostname = next.gacmotor.com
@@ -41,11 +48,6 @@ hostname = 10010.woread.com.cn, next.gacmotor.com, group.yun.139.com, aas.caiyun
 #京东网页版 登录后点击 我的
 //hostname = api.m.jd.com
 ^https:\/\/api\.m\.jd\.com\/api\?functionId=GetJDUserInfoUnionForJD url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/JingDongExtractCookie.js
-
-
-#联通App 阅光宝盒阅读页面
-//hostname = res.woread.com.cn
-^http:\/\/res\.woread\.com\.cn\/active\/readGiftBoxActive url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/ChinaUnicomWoReadExtractCookie.js
 
 
 #海信爱家 依次点击 海信爱家（微信公众号） -> （右下角 位置）个人中心 -> （第一个 位置）会员中心 -> （中间偏左下 位置）玩转积分 Quantumult X会通知获取Cookie成功 点开通知 复制Cookie
