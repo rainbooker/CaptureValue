@@ -1,7 +1,11 @@
 #获取Cookie成功后，取消本条重写的勾选（把✅变为☑️），从而避免产生不必要的mitm消耗手机性能。
 
-hostname = res.woread.com.cn, 10010.woread.com.cn, next.gacmotor.com, group.yun.139.com, aas.caiyun.feixin.10086.cn, mxsa.mxbc.net, webapi2.qmai.cn, mcs-mimp-web.sf-express.com, api.m.jd.com, sweixin.hisense.com, cps.hisense.com
+hostname = msmarket.msx.digitalyili.com, res.woread.com.cn, 10010.woread.com.cn, next.gacmotor.com, group.yun.139.com, aas.caiyun.feixin.10086.cn, mxsa.mxbc.net, webapi2.qmai.cn, mcs-mimp-web.sf-express.com, api.m.jd.com, sweixin.hisense.com, cps.hisense.com
 
+
+#活力伊利小程序获取Cookie
+//msmarket.msx.digitalyili.com
+^https:\/\/msmarket\.msx\.digitalyili\.com\/gateway\/api\/auth\/account\/login url script-response-body https://raw.githubusercontent.com/rainbooker/CaptureValue/master/Script/HuoLiYiLiAppletExtractCookie.js
 
 #联通App 阅光宝盒阅读页面 获取Cookie
 //hostname = res.woread.com.cn
